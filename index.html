@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculator Hub | Vaishak</title>
+  <meta name="description" content="Explore 20+ calculators for finance, science, and everyday use. Built with love and glassmorphism." />
+  <meta name="author" content="Vaishak" />
+<meta name="description" content="Explore 20+ free calculators for finance, science, math, and daily life. Built by Vaishak in Mysore, India using modern UI and glassmorphism." />
+<meta name="keywords" content="online calculators, finance tools, science calculators, math calculators, EMI calculator, tax calculator, matrix calculator, retirement calculator, Vaishak, Mysore" />
+<meta name="author" content="Vaishak" />
+<meta name="robots" content="index, follow" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: radial-gradient(circle at top left, #1f1c2c, #2c5364);
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px 20px;
+    }
+
+    header h1 {
+      font-size: 42px;
+      color: #f1c40f;
+      text-shadow: 0 0 10px #f1c40f;
+    }
+
+    .search-bar {
+      text-align: center;
+      margin: 20px auto;
+      animation: fadeIn 1s ease;
+    }
+
+    .search-bar input {
+      width: 80%;
+      padding: 14px;
+      font-size: 16px;
+      border-radius: 12px;
+      border: none;
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+      box-shadow: 0 0 12px rgba(241, 196, 15, 0.3);
+      transition: background 0.3s ease;
+    }
+
+    .search-bar input:focus {
+      background: rgba(255, 255, 255, 0.2);
+      outline: none;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      padding: 40px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(8px);
+      border-radius: 16px;
+      padding: 0;
+      text-align: left;
+      box-shadow: 0 0 20px rgba(0,0,0,0.4);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      overflow: hidden;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 25px rgba(241, 196, 15, 0.6);
+    }
+
+    .card a {
+      text-decoration: none;
+      color: #fff;
+      display: block;
+      padding: 20px;
+      height: 100%;
+      transition: background 0.3s ease;
+    }
+
+    .card a:hover {
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .card h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: #f39c12;
+      margin-top: 0;
+    }
+
+    .card span {
+      color: #bdc3c7;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      font-size: 14px;
+      color: #ccc;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🔢 Calculator Hub</h1>
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="🔍 Search calculators..." onkeyup="filterCards()" />
+    </div>
+  </header>
+
+  <section class="grid" id="calculatorGrid">
+    <div class="card">
+      <a href="simple.html">
+        <h3>🧮 Simple Calculator</h3>
+        <span>Basic arithmetic operations</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="scientific.html">
+        <h3>🔬 Scientific Calculator</h3>
+        <span>Advanced mathematical functions</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="age.html">
+        <h3>🎂 Age Calculator</h3>
+        <span>Calculate your exact age</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="sleep.html">
+        <h3>🛌 Sleep Calculator</h3>
+        <span>Find optimal sleep cycles</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="matrix.html">
+        <h3>🧊 Matrix Calculator</h3>
+        <span>Matrix operations and calculations</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="chemistry.html">
+        <h3>⚗️ Chemistry Calculator</h3>
+        <span>Chemical equations and formulas</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="physics.html">
+        <h3>🧲 Physics Calculator</h3>
+        <span>Physics formulas and calculations</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="emi.html">
+        <h3>🏦 EMI Calculator</h3>
+        <span>Equated Monthly Installments</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="loan.html">
+        <h3>💸 Loan Calculator</h3>
+        <span>Loan payments and interest</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="mortgage.html">
+        <h3>🏠 Mortgage Calculator</h3>
+        <span>Home loan calculations</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="tax.html">
+        <h3>🧾 Tax Calculator</h3>
+        <span>Income tax calculations</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="discount.html">
+        <h3>🏷️ Discount Calculator</h3>
+        <span>Calculate discounts and savings</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="roi.html">
+        <h3>📈 ROI Calculator</h3>
+        <span>Return on Investment</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="dividend.html">
+        <h3>💹 Dividend Calculator</h3>
+        <span>Dividend yield calculations</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="profit-loss.html">
+        <h3>📊 Profit & Loss Calculator</h3>
+        <span>Business P&L calculations</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="gst.html">
+        <h3>🧮 GST/VAT Calculator</h3>
+        <span>Tax calculations</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="retirement.html">
+        <h3>👴 Retirement Calculator</h3>
+        <span>Retirement planning</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="interest.html">
+        <h3>💰 Interest Calculator</h3>
+        <span>Simple and compound interest</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="currency.html">
+        <h3>💱 Currency Calculator</h3>
+        <span>Convert between currencies</span>
+      </a>
+    </div>
+    <div class="card">
+      <a href="accounting.html">
+        <h3>📚 Accounting Calculator</h3>
+        <span>Accounting formulas and calculations</span>
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <p>Made with 🫶 by Vaishak | Mysore, India</p>
+    <p>&copy; 2025 Calculator Hub. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function filterCards() {
+      const input = document.getElementById('searchInput').value.toLowerCase();
+      const cards = document.querySelectorAll('.card');
+      cards.forEach(card => {
+        const text = card.textContent.toLowerCase();
+        card.style.display = text.includes(input) ? 'block' : 'none';
+      });
+    }
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "www.calculatorhub.icu",
+  "@type": "WebSite",
+  "name": "Calculator Hub",
+  "url": "www.calculatorhub.icu",
+  "author": {
+    "@type": "Person",
+    "name": "Vaishak",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Mysore",
+      "addressCountry": "India"
+    }
+  },
+  "description": "Explore 20+ calculators for finance, science, math, and everyday use. Built with glowing UI and glassmorphism.",
+  "inLanguage": "en"
+}
+</script>
+</body>
+</html>
